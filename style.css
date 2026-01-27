@@ -16,25 +16,18 @@ h1 {
   margin-bottom: 20px;
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.card label {
+label {
   display: block;
+  margin-top: 12px;
   font-size: 14px;
-  margin-top: 10px;
 }
 
-.card input {
+input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-top: 4px;
+  box-sizing: border-box;
 }
 
 button {
@@ -45,16 +38,60 @@ button {
   border: none;
   border-radius: 10px;
   background: #2563eb;
-  color: #ffffff;
+  color: #fff;
 }
 
-.destaque {
-  background: #eef2ff;
-  font-weight: bold;
+button.secundario {
+  background: #64748b;
 }
 
-.aviso {
-  font-size: 11px;
+.linha-cdi {
+  display: flex;
+  gap: 8px;
+}
+
+.linha-cdi button {
+  width: auto;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.painel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+  text-align: right;
+}
+
+th {
   text-align: center;
+  background: #f1f5f9;
+}
+
+footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 11px;
   color: #555;
+}
+
+.erro {
+  display: none;
+  font-size: 0.5em;
+  color: #8B0000;
 }
