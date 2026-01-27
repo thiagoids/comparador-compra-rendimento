@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparador de Compra x Rendimento</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparador de Compra x Rendimento</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
-  <h1>Compra à vista ou parcelada?</h1>
+<h1>Compra à vista ou parcelada?</h1>
+<label>Valor da compra</label>
+<div id="erroValor" class="erro-campo">Campo obrigatório</div>
+<div id="erroValorZero" class="erro-campo">Informe um valor maior que zero</div>
+<input id="valorCompra" type="text" inputmode="decimal" required>
 
-  <label>Valor da compra</label>
-  <div id="erroValor" class="erro">Campo obrigatório</div>
-  <input id="valorCompra" inputmode="numeric">
+<label>Percentual de desconto</label>
+<div id="erroDesconto" class="erro-campo">Campo obrigatório</div>
+<div id="erroDescontoZero" class="erro-campo">Informe um valor maior que zero</div>
+<input id="desconto" type="text" inputmode="decimal" required>
 
-  <label>Percentual de desconto</label>
-  <div id="erroDesconto" class="erro">Campo obrigatório</div>
-  <input id="desconto" inputmode="numeric">
+<label>Quantidade de parcelas</label>
+<div id="erroParcelas" class="erro-campo">Campo obrigatório</div>
+<div id="erroParcelasZero" class="erro-campo">Informe um valor maior que zero</div>
+<input id="parcelas" type="text" inputmode="decimal" required>
 
-  <label>Quantidade de parcelas</label>
-  <div id="erroParcelas" class="erro">Campo obrigatório</div>
-  <input id="parcelas" inputmode="numeric">
-
-  <label>CDI anual</label>
-  <div id="erroCdiReq" class="erro">Campo obrigatório</div>
-  <div id="erroCdi" class="erro">
-    Não foi possível buscar o CDI automaticamente. Preencha manualmente.
-  </div>
-
-  <div class="linha-cdi">
-    <input id="cdi" inputmode="numeric">
-    <button type="button" id="btnCdi">Usar CDI atual</button>
-  </div>
-
-  <label>Percentual do CDI aplicado ao ano</label>
-  <input id="percentualCdi" inputmode="numeric" value="100">
-
-  <button type="button" id="btnCalcular">Calcular</button>
-  <button type="button" class="secundario" id="btnLimpar">Limpar</button>
-
-  <div class="painel" id="veredicto">Preencha os campos e clique em calcular</div>
-  <div class="painel" id="possibilidadeVista"></div>
-  <div class="painel" id="possibilidadeParcelado"></div>
-
-  <footer>
-    Esta é apenas uma simulação.<br>
-    Não constitui recomendação financeira.
-  </footer>
+<label>CDI anual (%)</label>
+<div id="erroCdiReq" class="erro-campo">Campo obrigatório</div>
+<div id="erroCdiZero" class="erro-campo">Informe um valor maior que zero</div>
+<div id="erroCdi" class="erro-cdi">Não foi possível buscar o CDI automaticamente. Preencha manualmente.</div>
+<div class="linha-cdi">
+<input id="cdi" type="text" inputmode="decimal" required>
+<button type="button" id="btnCdi">Usar CDI atual</button>
 </div>
 
+<label>Percentual do CDI aplicado em CDB ao ano (%)</label>
+<div id="erroPercCdi" class="erro-campo">Campo obrigatório</div>
+<div id="erroPercCdiZero" class="erro-campo">Informe um valor maior que zero</div>
+<input id="percentualCdi" type="text" inputmode="decimal" value="100" required>
+
+<button type="button" id="btnCalcular">Calcular</button>
+<button class="secundario" type="button" id="btnLimpar">Limpar</button>
+<button type="button" id="btnExplicacao">Por que é importante saber?</button>
+<div id="explicacaoFrame">
+<h3>Explicação bem resumida</h3>
+<p>Imagine que você tem <strong>R$ 10.000</strong>.<br>Em vez de pagar tudo de uma vez, você:</p>
+<ul>
+<li>paga <strong>um pouco por mês</strong></li>
+<li>deixa o dinheiro <strong>guardado rendendo</strong></li>
+</ul>
+<p>Enquanto você paga as parcelas:</p>
+<ul>
+<li>o dinheiro guardado <strong>gera rendimento</strong></li>
+<li>esse rendimento ajuda a pagar a compra</li>
+</ul>
+<p>No final:</p>
+<ul>
+<li>a compra está paga</li>
+<li><strong>ainda sobra dinheiro</strong></li>
+</ul>
+<p>👉 <strong>Ideia principal:</strong> pagar aos poucos enquanto o dinheiro rende é melhor do que pagar tudo e deixar o dinheiro parado se não tiver um desconto atrativo. Você ainda pode ganhar cashback ou milhas usando o cartão de crédito.</p>
+</div>
+
+<div class="painel" id="veredicto">Preencha os campos e clique em calcular</div>
+<div class="painel" id="possibilidadeVista"></div>
+<div class="painel" id="possibilidadeParcelado"></div>
+<footer>Esta é apenas uma simulação.<br>Não constitui recomendação financeira.</footer>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
