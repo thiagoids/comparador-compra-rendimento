@@ -3,45 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compra à Vista ou Parcelado</title>
+  <title>Comparador de Compra x Rendimento</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <h1>Compra à vista ou parcelado</h1>
+<div class="app">
+  <h1>Compra à vista ou parcelada?</h1>
 
-    <div class="card">
-      <label>Valor da compra</label>
-      <input type="text" id="valorCompra" placeholder="R$ 0,00">
+  <label>Valor da compra</label>
+  <div id="erroValor" class="erro">Campo obrigatório</div>
+  <input id="valorCompra" inputmode="numeric">
 
-      <label>Desconto à vista</label>
-      <input type="text" id="desconto" placeholder="0 %">
+  <label>Percentual de desconto</label>
+  <div id="erroDesconto" class="erro">Campo obrigatório</div>
+  <input id="desconto" inputmode="numeric">
 
-      <label>Quantidade de parcelas</label>
-      <input type="number" id="parcelas" placeholder="12">
+  <label>Quantidade de parcelas</label>
+  <div id="erroParcelas" class="erro">Campo obrigatório</div>
+  <input id="parcelas" inputmode="numeric">
 
-      <label>Taxa CDI anual</label>
-      <input type="text" id="cdi" readonly>
-
-      <label>Percentual do CDI aplicado ao ano</label>
-      <input type="text" id="percentualCdi" value="100 %">
-
-      <button onclick="calcular()">Calcular</button>
-    </div>
-
-    <div class="card destaque" id="veredicto">
-      Preencha os campos e clique em Calcular
-    </div>
-
-    <div class="card" id="possibilidadeVista"></div>
-    <div class="card" id="possibilidadeParcelado"></div>
-
-    <p class="aviso">
-      Esta aplicação é apenas uma simulação.<br>
-      Não constitui recomendação financeira.
-    </p>
+  <label>CDI anual</label>
+  <div id="erroCdiReq" class="erro">Campo obrigatório</div>
+  <div id="erroCdi" class="erro">
+    Não foi possível buscar o CDI automaticamente. Preencha manualmente.
   </div>
 
-  <script src="script.js"></script>
+  <div class="linha-cdi">
+    <input id="cdi" inputmode="numeric">
+    <button type="button" id="btnCdi">Usar CDI atual</button>
+  </div>
+
+  <label>Percentual do CDI aplicado ao ano</label>
+  <input id="percentualCdi" inputmode="numeric" value="100">
+
+  <button type="button" id="btnCalcular">Calcular</button>
+  <button type="button" class="secundario" id="btnLimpar">Limpar</button>
+
+  <div class="painel" id="veredicto">Preencha os campos e clique em calcular</div>
+  <div class="painel" id="possibilidadeVista"></div>
+  <div class="painel" id="possibilidadeParcelado"></div>
+
+  <footer>
+    Esta é apenas uma simulação.<br>
+    Não constitui recomendação financeira.
+  </footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
