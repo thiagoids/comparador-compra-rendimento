@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.destaque {
+  background: #eef2ff;
+  font-weight: bold;
+}
+
+.aviso {
+  font-size: 11px;
+  text-align: center;
+  color: #555;
+}

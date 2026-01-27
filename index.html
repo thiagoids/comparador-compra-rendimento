@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra à Vista ou Parcelado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Compra à vista ou parcelado</h1>
+
+    <div class="card">
+      <label>Valor da compra</label>
+      <input type="text" id="valorCompra" placeholder="R$ 0,00">
+
+      <label>Desconto à vista</label>
+      <input type="text" id="desconto" placeholder="0 %">
+
+      <label>Quantidade de parcelas</label>
+      <input type="number" id="parcelas" placeholder="12">
+
+      <label>Taxa CDI anual</label>
+      <input type="text" id="cdi" readonly>
+
+      <label>Percentual do CDI aplicado ao ano</label>
+      <input type="text" id="percentualCdi" value="100 %">
+
+      <button onclick="calcular()">Calcular</button>
+    </div>
+
+    <div class="card destaque" id="veredicto">
+      Preencha os campos e clique em Calcular
+    </div>
+
+    <div class="card" id="possibilidadeVista"></div>
+    <div class="card" id="possibilidadeParcelado"></div>
+
+    <p class="aviso">
+      Esta aplicação é apenas uma simulação.<br>
+      Não constitui recomendação financeira.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
