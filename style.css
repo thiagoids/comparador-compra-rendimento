@@ -1,16 +1,61 @@
-body{margin:0;font-family:Arial,sans-serif;background:#f2f4f8}
-.app{max-width:420px;margin:auto;padding:16px}
-h1{text-align:center;font-size:22px;margin-bottom:16px}
-label{display:block;margin-top:12px;font-size:14px}
-input{width:100%;padding:10px;font-size:16px;margin-top:4px;box-sizing:border-box}
-button{width:100%;padding:14px;margin-top:16px;font-size:16px;border:none;border-radius:10px;background:#2563eb;color:#fff;cursor:pointer}
-button.sec{background:#64748b}
-.linha-cdi{display:flex;gap:8px}
-.linha-cdi button{width:auto;font-size:14px;padding:10px}
-.painel{background:#fff;border-radius:12px;padding:16px;margin-top:16px;box-shadow:0 4px 10px rgba(0,0,0,.05);font-size:14px;overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th,td{border-bottom:1px solid #ddd;padding:6px;text-align:right}
-th{text-align:center;background:#f1f5f9}
-.erro{display:none;font-size:.7em;color:#8B0000}
-#explicacao{display:none;background:#e0f2fe;padding:12px;border-radius:8px;margin-top:12px}
-footer{text-align:center;font-size:11px;color:#555;margin-top:20px}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.painel {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.explicativo {
+  background: #eef3f7;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.erro {
+  display: none;
+  color: darkred;
+  font-size: 0.7em;
+}
+
+.irpf {
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: right;
+}
+
+th {
+  background: #eee;
+}
