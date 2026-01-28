@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comparador Compra x Rendimento</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Simulador Parcelar ou À Vista</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
-<h1>Compra à vista ou parcelada?</h1>
 
-<label>Valor da compra</label>
-<div id="eValor" class="erro">Informe valor maior que zero</div>
-<input id="valor">
+<h1>Simulador: Parcelar ou Pagar à Vista</h1>
 
-<label>Desconto (%)</label>
-<div id="eDesc" class="erro">Informe valor maior que zero</div>
-<input id="desconto">
+<div class="painel explicativo">
+  <h2>Por que parcelar pode ser vantajoso?</h2>
 
-<label>Parcelas</label>
-<div id="eParc" class="erro">Informe valor maior que zero</div>
-<input id="parcelas">
+  <div id="explicacao">
+    Imagine que você tem um valor disponível para pagar uma compra.<br><br>
 
-<label>CDI anual (%)</label>
-<div id="eCdi" class="erro">Informe valor maior que zero</div>
-<div class="linha-cdi">
+    Em vez de gastar todo o dinheiro de uma vez, você decide:<br>
+    • pagar a compra em parcelas mensais<br>
+    • manter o dinheiro aplicado rendendo<br><br>
+
+    Enquanto as parcelas são pagas:<br>
+    • o dinheiro aplicado continua rendendo juros<br>
+    • os rendimentos ajudam a compensar o valor pago nas parcelas<br><br>
+
+    No final do período:<br>
+    • a compra estaria totalmente paga<br>
+    • ainda poderia sobrar dinheiro da aplicação<br><br>
+
+    👉 A ideia central é comparar se o rendimento do investimento,
+    mesmo considerando impostos, supera o desconto obtido ao pagar à vista.
+  </div>
+
+  <p class="irpf">
+    Importante: este simulador considera o <strong>IRPF regressivo de CDB</strong>,
+    aplicado apenas sobre os rendimentos, conforme o prazo da aplicação.
+  </p>
+
+  <button id="btnInfo">Por que é importante saber?</button>
+</div>
+
+<div class="painel">
+  <label>Valor da compra (R$)</label>
+  <span id="eValor" class="erro">Informe um valor maior que zero</span>
+  <input id="valor">
+
+  <label>Desconto à vista (%)</label>
+  <span id="eDesc" class="erro">Informe um valor maior que zero</span>
+  <input id="desconto">
+
+  <label>Número de parcelas</label>
+  <span id="eParc" class="erro">Informe um valor maior que zero</span>
+  <input id="parcelas">
+
+  <label>CDI anual (%)</label>
+  <span id="eCdi" class="erro">Informe um valor maior que zero</span>
   <input id="cdi">
-  <button id="btnCdi" type="button">Usar CDI atual</button>
+  <button id="btnCdi">Usar CDI atual</button>
+
+  <label>Percentual do CDI aplicado em CDB ao ano (%)</label>
+  <span id="ePerc" class="erro">Informe um valor maior que zero</span>
+  <input id="percCdi">
+
+  <button id="btnCalc">Calcular</button>
+  <button id="btnLimpar">Limpar</button>
 </div>
 
-<label>Percentual do CDI aplicado em CDB ao ano (%)</label>
-<div id="ePerc" class="erro">Informe valor maior que zero</div>
-<input id="percCdi" value="100">
-
-<button id="btnCalc">Calcular</button>
-<button class="sec" id="btnLimpar">Limpar</button>
-<button class="sec" id="btnInfo">Por que é importante saber?</button>
-
-<div id="explicacao">
-Imagine que você paga aos poucos enquanto seu dinheiro rende. O rendimento ajuda a pagar a compra e, no final, pode sobrar dinheiro.
+<div class="painel">
+  <h2>Resultado</h2>
+  <div id="veredicto"></div>
+  <div id="p1"></div>
+  <div id="p2"></div>
 </div>
 
-<div class="painel" id="veredicto">Preencha os campos e clique em calcular</div>
-<div class="painel" id="p1"></div>
-<div class="painel" id="p2"></div>
-
-<footer>Simulação educativa. Não é recomendação financeira.</footer>
-</div>
 <script src="script.js"></script>
 </body>
 </html>
